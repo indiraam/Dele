@@ -13,6 +13,12 @@ target 'iOSBuildApp' do
   
 
   platform :ios, '9.0'
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'iOSBuildAppTests' do
     inherit! :search_paths
     # Pods for testing
