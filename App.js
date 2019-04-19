@@ -54,7 +54,7 @@ const ThirdRoute = () => (
     <View style={styles.container}>
       <WebView
         source={{
-          uri: "https://www.google.com/"
+          uri: "https://facebook.github.io/react-native/docs/tutorial"
         }}
         onLoadProgress={e => console.log(e.nativeEvent.progress)}
         javaScriptEnabled={true}
