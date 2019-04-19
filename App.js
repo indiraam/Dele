@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, StyleSheet, Dimensions,WebView } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
 import { SearchBar } from "react-native-elements";
+import { createStackNavigator, createAppContainer } from 'react-navigation';  
  
 // const FirstRoute = () => (
 //   <View style={[styles.scene, { backgroundColor: '#ff4081' }]} />
@@ -53,7 +54,7 @@ const ThirdRoute = () => (
     <View style={styles.container}>
       <WebView
         source={{
-          uri: "https://facebook.github.io/react-native/docs/tutorial"
+          uri: "https://www.google.com/"
         }}
         onLoadProgress={e => console.log(e.nativeEvent.progress)}
         javaScriptEnabled={true}
@@ -102,6 +103,19 @@ const FourthRoute = () => (
 );
  
 export default class App extends React.Component {
+  static navigationOptions = {
+    title: "Home",
+    headerStyle: {
+      backgroundColor: "#03A9F4"
+    },
+    headerTintColor: "#fff",
+    headerTitleStyle: {
+      fontWeight: "bold"
+    }
+  };
+
+
+
   state = {
     index: 0,
     routes: [
@@ -130,8 +144,51 @@ export default class App extends React.Component {
   }
 }
  
+
+
 const styles = StyleSheet.create({
   scene: {
-    flex: 1,
+    flex: 1
   },
+  buttonContainer1: {
+    // backgroundColor: "#e336d8",
+    color: "#FFFFFF",
+
+    backgroundColor: "#ed1a2b"
+  },
+  myState: {
+    marginTop: 20,
+    textAlign: "center",
+    color: "blue",
+    fontWeight: "bold",
+    fontSize: 20,
+    backgroundColor: "#FFFFFF"
+  },
+  container: {
+    flex: 1,
+    paddingTop: 10
+  },
+  sectionHeader: {
+    paddingTop: 4,
+    padding: 10,
+    fontSize: 24,
+    color: "white",
+    fontWeight: "bold",
+    backgroundColor: "#ff0000"
+  },
+  bottomView: {
+    width: "100%",
+    bottom: 0,
+    paddingTop: 15
+  },
+  item: {
+    alignItems: "center",
+    paddingTop: 15,
+    paddingLeft: 10,
+    fontSize: 20,
+    height: 60,
+
+    borderColor: "#FAF8F8",
+    borderWidth: 1
+  }
 });
