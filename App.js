@@ -187,7 +187,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     fontSize: 20,
     height: 60,
-
     borderColor: "#FAF8F8",
     borderWidth: 1
   }
